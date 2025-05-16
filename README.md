@@ -54,9 +54,9 @@ python train_seg.py
 
 ### 🎯 Segmentation
 
-- Input: RGB satellite images
+- Input: satellite images
 - Output: Pixel-wise fire segmentation masks
-- Metrics: mIoU, Dice coefficient
+- Metrics: mIoU, Recall, F1, Kappa
 
 ## 📮 Contact
 
