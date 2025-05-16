@@ -3,7 +3,7 @@
 **SatFire Benchmark** provides standardized code for classification and segmentation tasks based on the [SatFire dataset](https://huggingface.co/datasets/kexuan1021/SatFire), which focuses on active wildfire detection and analysis from satellite remote sensing imagery.
 
 ## 📂 Dataset
-![Example Image](SatFire.png)  
+![Example Image](SatFire.jpg)  
 
 The SatFire dataset includes high-resolution optical remote sensing images annotated with fire and non-fire categories, as well as pixel-level masks for active fire segmentation.
 
