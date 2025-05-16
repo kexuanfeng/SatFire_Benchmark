@@ -3,6 +3,7 @@
 **SatFire Benchmark** provides standardized code for classification and segmentation tasks based on the [SatFire dataset](https://huggingface.co/datasets/kexuan1021/SatFire), which focuses on active wildfire detection and analysis from satellite remote sensing imagery.
 
 ## 📂 Dataset
+![Example Image](SatFire.png)  
 
 The SatFire dataset includes high-resolution optical remote sensing images annotated with fire and non-fire categories, as well as pixel-level masks for active fire segmentation.
 
@@ -15,56 +16,39 @@ The SatFire dataset includes high-resolution optical remote sensing images annot
 ```
 SatFire_Benchmark/
 ├── classification/        # Classification training & evaluation code
-│   ├── train.py
-│   ├── dataset.py
-│   └── ...
+│   ├── satfire_classification_tsne.py
 ├── segmentation/          # Segmentation training & evaluation code
-│   ├── train.py
-│   ├── dataset.py
-│   └── ...
-├── utils/                 # Common tools and helpers
-├── requirements.txt
+│   ├── train_seg.py
+│   ├── data_set.py
+│   └── test.py
 └── README.md
 ```
 
 ## 🚀 Quick Start
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/kexuanfeng/SatFire_Benchmark.git
-cd SatFire_Benchmark
-```
-
-### 2. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Download the dataset
+### 1. Download the dataset
 
 Download the dataset manually from [Hugging Face](https://huggingface.co/datasets/kexuan1021/SatFire) and place it under a suitable directory (e.g., `./data/SatFire`).
 
-### 4. Run classification
+### 2. Run classification
 
 ```bash
 cd classification
-python train.py --data_root ../data/SatFire
+python train.py
 ```
 
-### 5. Run segmentation
+### 3. Run segmentation
 
 ```bash
 cd segmentation
-python train.py --data_root ../data/SatFire
+python train_seg.py 
 ```
 
 ## 🧪 Tasks
 
 ### 🔤 Classification
 
-- Input: RGB satellite images
+- Input: satellite images
 - Output: Binary label (`fire` or `non-fire`)
 - Metrics: Accuracy, Precision, Recall, F1-score
 
@@ -73,28 +57,6 @@ python train.py --data_root ../data/SatFire
 - Input: RGB satellite images
 - Output: Pixel-wise fire segmentation masks
 - Metrics: mIoU, Dice coefficient
-
-## 📈 Results
-
-| Task           | Method     | Accuracy / mIoU |
-|----------------|------------|------------------|
-| Classification | ResNet18   | 95.2%           |
-| Segmentation   | UNet       | 81.6% mIoU      |
-
-> Note: These results are based on preliminary experiments. See respective folders for configuration details.
-
-## 📝 Citation
-
-If you use this repository or the SatFire dataset in your work, please cite:
-
-```bibtex
-@misc{satfire2025,
-  title={SatFire: A Benchmark Dataset for Active Wildfire Detection in Satellite Imagery},
-  author={Feng, Kexuan},
-  year={2025},
-  howpublished={\url{https://huggingface.co/datasets/kexuan1021/SatFire}}
-}
-```
 
 ## 📮 Contact
 
